@@ -1,0 +1,31 @@
+<div class="container">
+    <h3 class="h3">Sản Phẩm</h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor="let product of products">
+            <div class="product-grid2">
+                <div class="product-image2">
+                    <a (click)="detailProduct(product)">
+                        <img class="pic-1" src="{{ product.img }}">
+                        <img class="pic-2" src="{{ product.img2 }}">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <a class="add-to-cart" href="">Add to cart</a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{ product.name }}</a></h3>
+                    <span class="price">{{ product.price }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div *ngIf="selectedProduct">
+            <!-- {{ selectedProduct.desc }} -->
+        </div>
+
+
+    </div>
+</div>

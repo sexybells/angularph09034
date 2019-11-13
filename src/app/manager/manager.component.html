@@ -1,0 +1,32 @@
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Description</th>
+
+                            <th scope="col" class="text-center">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of manager">
+                            <td><img src="{{ product.img }}" /> </td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.desc }}</td>
+                            <td>{{ product.price }}</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

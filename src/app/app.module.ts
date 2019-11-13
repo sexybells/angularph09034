@@ -9,7 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { DescComponent } from './desc/desc.component';
 import { BodynewsComponent } from './bodynews/bodynews.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductComponent } from './product/product.component';
+import { ProductsComponent } from './products/products.component';
 
+import { ManagerComponent } from './manager/manager.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +22,18 @@ import { BodynewsComponent } from './bodynews/bodynews.component';
     FooterComponent,
     IntroductionComponent,
     DescComponent,
-    BodynewsComponent
+    BodynewsComponent,
+    ProductComponent,
+    ProductsComponent,
+    ManagerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
