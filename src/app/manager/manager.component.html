@@ -5,7 +5,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col"> </th>
+                            <th scope="col">ID</th>
                             <th scope="col">Product</th>
                             <th scope="col">Description</th>
 
@@ -14,7 +14,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let product of manager">
+                        <tr *ngFor="let product of manager; let i = index">
+                            <td>{{ i}}</td>
                             <td><img src="{{ product.img }}" /> </td>
                             <td>{{ product.name }}</td>
                             <td>{{ product.desc }}</td>
