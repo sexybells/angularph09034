@@ -1,3 +1,4 @@
+import { ProductsComponent } from './../products/products.component';
 import { DataProduct } from './../data';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,8 +14,11 @@ export class ManagerComponent implements OnInit {
   ngOnInit() {
   }
   manager = DataProduct;
+  selectedProduct:ProductsComponent;
   deleteProduct(id){
-
     this.manager = this.manager.filter(item => item.id !== id);
+}
+detailProduct(product) {
+  this.selectedProduct = product;
 }
 }

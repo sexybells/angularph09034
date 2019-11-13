@@ -14,6 +14,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 
 import { ManagerComponent } from './manager/manager.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { ManagerComponent } from './manager/manager.component';
     BodynewsComponent,
     ProductComponent,
     ProductsComponent,
-    ManagerComponent
+    ManagerComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

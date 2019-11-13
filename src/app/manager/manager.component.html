@@ -21,13 +21,24 @@
                             <td>{{ product.desc }}</td>
                             <td>{{ product.price }}</td>
                             <td class="text-right"><button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)"><i class="fa fa-trash"></i> </button> </td>
+                            <td class="text-right"><button class="btn btn-sm btn-primary" (click)="detailProduct(product)">Detail </button> </td>
                         </tr>
 
 
+
                     </tbody>
+
                 </table>
+
+                <div *ngIf="selectedProduct">
+                    <app-product-detail [data]="selectedProduct"></app-product-detail>
+
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+<!-- <p>{{ selectedProduct.name }}</p>
+                    <p>{{ selectedProduct.price }}</p>
+                    <p>{{ selectedProduct.desc }}</p> -->
