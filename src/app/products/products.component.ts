@@ -1,3 +1,4 @@
+import { ProductService } from './../Service/product.service';
 import { ProductComponent } from './../product/product.component';
 import { ProductType } from './../product';
 import { DataProduct } from './../data';
@@ -10,15 +11,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  products=DataProduct;
+  selectedProduct: ProductType;
 
-  constructor() { }
+  constructor(private productService: ProductService) {
+
+  }
 
 
   ngOnInit() {
+    this.getProducts();
   }
-  products = DataProduct;
-  selectedProduct: ProductComponent;
-  deleteProduct(id){
+
+
+  getProducts()
+  {
+    this.products = this.productService.getProduct();
+  }
+  deleteProduct(id)
+  {
 
       this.products = this.products.filter(item => item.id !== id);
   }

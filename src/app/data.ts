@@ -33,7 +33,7 @@ export const DataProduct: ProductType[] = [
   price: '8.990.000đ',
   img : 'https://media-ak.static-adayroi.com/820_820/80/h75/hc2/15431849738270.jpg',
   img2: 'https://media-ak.static-adayroi.com/820_820/80/hed/h23/16340152680478.jpg'
-},
+}
 ];
 
 

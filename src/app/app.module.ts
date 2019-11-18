@@ -12,9 +12,10 @@ import { BodynewsComponent } from './bodynews/bodynews.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
-
 import { ManagerComponent } from './manager/manager.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductComponent,
     ProductsComponent,
     ManagerComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    AddproductComponent,
+
   ],
   imports: [
     BrowserModule,

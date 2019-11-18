@@ -1,1 +1,27 @@
+.flexslider {
+    position: relative;
+    zoom: 1;
+    clear: both;
+    overflow: hidden;
+}
 
+.flex-caption {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container .offset-by-one {
+    padding-left: 48px;
+}

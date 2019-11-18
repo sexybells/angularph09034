@@ -1,6 +1,7 @@
 import { ProductsComponent } from './../products/products.component';
 import { DataProduct } from './../data';
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../Service/product.service';
 
 @Component({
   selector: 'app-manager',
@@ -9,12 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.getProducts();
   }
   manager = DataProduct;
   selectedProduct:ProductsComponent;
+  getProducts()
+  {
+    this.manager = this.productService.getProduct();
+  }
   deleteProduct(id){
     this.manager = this.manager.filter(item => item.id !== id);
 }
