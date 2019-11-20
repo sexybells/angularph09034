@@ -17,26 +17,43 @@
 
 <body>
     <div class="wrapper">
-        <app-fixedmenu></app-fixedmenu>
+        <nav class="fixedmenu">
+            <div class="fixedmenu__wrapper">
+                <div class="fixedmenu__logo">
+                    <img src="//cdn.shopify.com/s/files/1/0173/8828/files/Proper_Logo_280x_2x_240x240_6b887461-1064-47c5-a958-b6e5a5726d97_280x@2x.png?v=1532311943" alt="Studio Proper" class="primary_logo">
+                </div>
+                <ul class="fixedmenu__menu main-menu">
+                    <li class="fixedmenu__item nav-item active">
+                        <a routerLink="/products" routerLinkActive="active" class="fixedmenu__link">Products</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="" routerLink="/home" class="fixedmenu__link" routerLinkActive="active">Home</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="#" class="fixedmenu__link">Item</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="#" class="fixedmenu__link">Item</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="#" class="fixedmenu__link">Item</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="#" class="fixedmenu__link">Item</a>
+                    </li>
+                    <li class="fixedmenu__item">
+                        <a href="#" class="fixedmenu__link">Item</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
 
     </div>
-    <app-banner></app-banner>
-    <div style="padding-top: 50px;">
-        <app-introduction></app-introduction>
-    </div>
-    <div style="padding-top: 50px;">
-        <app-products></app-products>
-    </div>
-    <div style="padding-top: 50px; padding-bottom: 50px;" class="container">
-        <app-bodynews></app-bodynews>
-    </div>
-    <div>
-        <app-manager></app-manager>
-    </div>
-    <div>
-        <app-desc></app-desc>
-    </div>
+
+    <router-outlet></router-outlet>
 </body>
+
 <div style="padding-top: 50px;">
     <app-footer></app-footer>
 </div>

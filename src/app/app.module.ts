@@ -15,6 +15,8 @@ import { ProductsComponent } from './products/products.component';
 import { ManagerComponent } from './manager/manager.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     ManagerComponent,
     ProductDetailComponent,
     AddproductComponent,
+    HomeComponent,
+    NotfoundComponent,
 
   ],
   imports: [
