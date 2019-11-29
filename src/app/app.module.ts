@@ -20,6 +20,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { FormsModule } from '@angular/forms';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NotfoundComponent,
     ProductAddComponent,
+    ProductEditComponent,
 
 
   ],
