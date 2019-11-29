@@ -10,21 +10,21 @@ import { ProductService } from '../Service/product.service';
 })
 export class ManagerComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getProducts();
+    // this.getProducts();
   }
-  manager = DataProduct;
-  selectedProduct:ProductsComponent;
-  getProducts()
-  {
-    this.manager = this.productService.getProduct();
-  }
-  deleteProduct(id){
-    this.manager = this.manager.filter(item => item.id !== id);
-}
-detailProduct(product) {
-  this.selectedProduct = product;
-}
+//   manager = DataProduct;
+//   selectedProduct:ProductsComponent;
+//   getProducts()
+//   {
+//     this.manager = this.productService.getProduct();
+//   }
+//   deleteProduct(id){
+//     this.manager = this.manager.filter(item => item.id !== id);
+// }
+// detailProduct(product) {
+//   this.selectedProduct = product;
+// }
 }

@@ -11,29 +11,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products=DataProduct;
-  selectedProduct: ProductType;
+  // products = DataProduct;
 
+  products: ProductType[];
   constructor(private productService: ProductService) {
 
   }
 
 
   ngOnInit() {
-    this.getProducts();
+    this.getProducts()
   }
 
-
-  getProducts()
-  {
-    this.products = this.productService.getProduct();
+  getProducts(){
+    this.productService.getProducts().subscribe( data => {
+      this.products = data;
+    })
   }
-  deleteProduct(id)
-  {
 
-      this.products = this.products.filter(item => item.id !== id);
-  }
-  detailProduct(product) {
-    this.selectedProduct = product;
+  deleteProduct(id){
+      this.productService.deleteProduct(id).subscribe(data => {
+        this.products = this.products.filter(item => item.id != data.id)
+      })
   }
 }

@@ -17,7 +17,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,11 +36,15 @@ import { NotfoundComponent } from './notfound/notfound.component';
     AddproductComponent,
     HomeComponent,
     NotfoundComponent,
+    ProductAddComponent,
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
 
   providers: [],
